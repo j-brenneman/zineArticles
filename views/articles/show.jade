@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  div.container
+    h1 
+      a(href='/articles') The Zine
+  div.articles
+    div.article
+      if(article.backgroundColor && article.backgroundURL === '')
+        h3(style = 'color: black; background-image: url(' + '../images/concrete_seamless.png' + ');') #{article.title}
+          a.right(href='/articles/' + article._id + '/edit') Edit
+      else if(article.backgroundURL === '' && !article.backgroundColor)
+        h3(style = 'color: white; background-image: url(' + '../images/concrete_seamless.png' + ');' ) #{article.title}
+          a.right(href= '/articles/' + article._id + '/edit') Edit
+      else if(article.backgroundURL != '' && article.backgroundColor) 
+        h3(stlye = 'color: black; background-image: url(' + article.backgroundURL + ');') #{article.title}
+          a.right(href='/articles/' + article._id + '/edit') Edit
+      else 
+        h3(style = 'color: white; background-image: url(' + article.backgroundURL + ');') #{article.title}
+          a.right(href='/articles/' + article._id + '/edit') Edit
+      p= article.body

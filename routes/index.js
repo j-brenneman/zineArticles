@@ -4,9 +4,9 @@ var db = require('./../lib/javascripts/database.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
-    res.render('index');
-
+  db.articlesFind(function (err, data) {
+    res.render('articles/index', {articles: data.reverse()});
+  })
 });
 
 module.exports = router;

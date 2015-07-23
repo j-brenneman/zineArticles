@@ -17,6 +17,10 @@ body, html {
   display: inline-block;
   margin-bottom: 4%;
 }
+.container h1 a:link, .container h1 a:visited {
+  text-decoration: none;
+  color: inherit;
+}
 
 .formContent {
   width: 95%;
@@ -99,4 +103,23 @@ body, html {
 .article h3 a:link, .article h3 a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+.article .right {
+  margin-left: 90%;
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  margin-left: 14.5%;
+  margin-top: 1%;
+}
+
+.error {
+  color: red;
+}
+
+.create {
+  color: white;
 }

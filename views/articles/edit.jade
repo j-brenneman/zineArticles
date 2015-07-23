@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  div.container
+    h1 
+      a(href='/articles') The Zine
+  div.formContent
+    h2 Edit Article
+    form(action='/articles/'+ article._id method='post')
+      div.formLabels
+        label.title Title
+        label.url Background Url
+        label.excerpt Excerpt
+        label Body
+      div.inputs  
+        input(type='text' name='title' value= article.title)
+        input(type='text' name='url' value= article.backgroundURL) 
+        if(article.backgroundColor)
+          input(type='checkbox' name='color' checked)
+        else
+          input(type='checkbox' name='color')
+        span.sideText Background image has dark colors
+        textarea(name='excerpt' rows='10' cols='50') #{article.excerpt}
+        textarea(name='body' rows='10' cols='50') #{article.body}
+        button(type='submit') Update
+    form(action='/articles/' + article._id + '/delete' method='post')
+      button.delete(type='submit') Delete

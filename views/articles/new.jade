@@ -2,9 +2,14 @@ extends ../layout
 
 block content
   div.container
-    h1 The Zine
+    h1 
+      a(href='/articles') The Zine
   div.formContent
     h2 New Article
+    if(errors)
+      ul
+        each error in errors 
+          li.error= error
     form(action='/articles/new' method='post')
       div.formLabels
         label.title Title
