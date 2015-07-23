@@ -7,13 +7,13 @@ block content
   div.articles
     each article in articles
       div.article
-        if(article.backgroundColor && article.backgroundURL === '')
-          h3(style = 'color: white; background-image: url(' + '../images/concrete_seamless.png' + ');') 
+        if(article.backgroundURL === '')
+          h3(style = 'color: black; background-image: url(' + '../images/concrete_seamless.png' + ');') 
             a(href='/articles/' + article._id) #{article.title} 
-        else if(article.backgroundURL === '' && !article.backgroundColor)
-          h3(style = 'color: black; background-image: url(' + '../images/concrete_seamless.png' + ');' ) 
+        else if(article.backgroundURL === 'on' && article.backgroundColor != 'on')
+          h3(style = 'color: white; background-image: url(' + '../images/concrete_seamless.png' + ');' ) 
             a(href='/articles/' + article._id) #{article.title}
-        else if(article.backgroundURL != '' && article.backgroundColor) 
+        else if(article.backgroundURL != '' && article.backgroundColor != 'on') 
           h3(stlye = 'color: black; background-image: url(' + article.backgroundURL + ');') 
             a(href='/articles/' + article._id) #{article.title}
         else 

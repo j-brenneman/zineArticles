@@ -6,13 +6,13 @@ block content
       a(href='/articles') The Zine
   div.articles
     div.article
-      if(article.backgroundColor && article.backgroundURL === '')
-        h3(style = 'color: white; background-image: url(' + '../images/concrete_seamless.png' + ');') #{article.title}
+      if(article.backgroundColor === 'on' && article.backgroundURL === '')
+        h3(style = 'color: black; background-image: url(' + '../images/concrete_seamless.png' + ');') #{article.title}
           a.right(href='/articles/' + article._id + '/edit') Edit
-      else if(article.backgroundURL === '' && !article.backgroundColor)
-        h3(style = 'color: black; background-image: url(' + '../images/concrete_seamless.png' + ');' ) #{article.title}
+      else if(article.backgroundURL === '' && article.backgroundColor != 'on')
+        h3(style = 'color: white; background-image: url(' + '../images/concrete_seamless.png' + ');' ) #{article.title}
           a.right(href= '/articles/' + article._id + '/edit') Edit
-      else if(article.backgroundURL != '' && article.backgroundColor) 
+      else if(article.backgroundURL != '' && article.backgroundColor === 'on') 
         h3(stlye = 'color: black; background-image: url(' + article.backgroundURL + ');') #{article.title}
           a.right(href='/articles/' + article._id + '/edit') Edit
       else 
