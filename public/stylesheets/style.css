@@ -1,0 +1,76 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  background-image: url("/images/congruent_outline.png");
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+  padding-top: 2%;
+  background-image: url("https://unsplash.imgix.net/photo-1429198739803-7db875882052?dpr=2&fit=crop&fm=jpg&h=1575&q=75&w=1050");
+  text-align: right;
+}
+
+.container h1 {
+  margin-right: 2.5%;
+  display: inline-block;
+  margin-bottom: 4%;
+}
+
+.formContent {
+  width: 95%;
+  margin: 2% auto;
+  background: white;
+  padding-bottom: 3%;
+}
+
+.formContent h2 {
+  width: 95%;
+  margin-left: 2%;
+  padding-top: 1%;
+  border-bottom: 1px solid gray;
+}
+
+.formLabels {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 2%;
+}
+
+.formLabels label {
+  display: block;
+  vertical-align: top;
+}
+
+.inputs {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  margin-left: 5%;
+}
+
+.formContent input, textarea {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.sideText {
+  position: absolute;
+  left: 18%;
+  bottom: 58%;
+}
+
+.title {
+  margin-bottom: 20%;
+}
+
+.url {
+  margin-bottom: 55%;
+}
+
+.excerpt {
+  margin-bottom: 135%;
+}

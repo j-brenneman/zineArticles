@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  div.container
+    h1 The Zine
+  div.formContent
+    h2 New Article
+    form(action='/articles/new' method='post')
+      div.formLabels
+        label.title Title
+        label.url Background Url
+        label.excerpt Excerpt
+        label Body
+      div.inputs  
+        input(type='text' name='title')
+        input(type='text' name='url') 
+        input(type='checkbox' name='color')
+        span.sideText Background image has dark colors
+        textarea(name='excerpt' rows='10' cols='50')
+        textarea(name='body' rows='10' cols='50')
+        button(type='submit') Add Article
+        
+      
+  
