@@ -16,9 +16,9 @@ router.get('/new', function (req, res, next) {
 // Create New Article
 router.post('/new', function (req, res, next) {
   var errors = validations(req.body);
-  if(errors === []) {
+  if(errors.length == 0) {
     db.articleInsert(req.body);
-    res.redirect('/articles');
+    res.redirect('/');
   } else {
     res.render('articles/new', {errors: errors});
   }
