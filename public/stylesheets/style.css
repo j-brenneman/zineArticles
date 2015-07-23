@@ -74,3 +74,29 @@ body, html {
 .excerpt {
   margin-bottom: 135%;
 }
+
+.articles {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.article {
+  margin: 2% 0;
+}
+
+.article h3 {
+  background-image: url("../images/concrete_seamless.png");
+  padding: 1% 1%;
+  margin: 0;
+}
+
+.article p {
+  margin: 0;
+  padding: 1% 1%;
+  background-color: white;
+}
+
+.article h3 a:link, .article h3 a:visited {
+  text-decoration: none;
+  color: inherit;
+}
